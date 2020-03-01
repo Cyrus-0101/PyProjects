@@ -34,7 +34,10 @@ for lt, ln, nm, el in zip(lat, lon, nam, elev):
         color='grey',
         fill_opacity=0.7
     ))
+
 fgp = folium.FeatureGroup(name="Population")
+
+
 fgp.add_child(folium.GeoJson(
     data=open('worldPop.json', 'r', encoding='utf-8-sig')
     .read(),
